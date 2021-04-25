@@ -1,0 +1,91 @@
+@import '../../styles/colors';
+
+footer {
+    background-color: $black;
+    color: $white;
+    p {
+        color: $white;
+    }
+
+    .footerContent {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+
+        display: flex;
+        justify-content: space-between;
+
+        .location {
+            line-height: 160%;
+
+            p {
+                margin-top: 2rem;
+            }
+        }
+        
+        .support {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+
+            gap: 1rem;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                max-width: 11.25rem;
+                height: 2.3rem;
+
+                padding: 0.3rem 1rem;
+
+                border: 0;
+                border-radius: 0.3rem;
+
+                text-transform: uppercase;
+
+                cursor: pointer;
+
+                span {
+                    flex: 1;
+                    font-size: 0.75rem;
+                    color: $black;
+                }
+
+                img {
+                    margin-right: 0.8rem;
+                }
+            }
+        }
+
+        .copyright {
+            display: flex;
+            justify-content:center;
+
+            gap: 2rem;
+        }
+
+    }
+    
+    @media screen and (max-width: 720px) {
+        
+        .footerContent {
+            flex-direction: column;
+            padding: 2rem 1rem;
+
+            .support {
+                margin: 2rem;
+
+                button {
+                    width: 100%;
+                }
+            }
+
+            .copyright {
+                justify-content: space-around;
+            }
+        }
+    }
+}
