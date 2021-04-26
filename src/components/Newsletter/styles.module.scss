@@ -7,7 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 2rem;
+    
     background-color: $gray-lighter;
 
     .newsletterForm {
@@ -32,10 +33,12 @@
     
                 padding: 0.5rem;
                 border: 0;
+                border-radius: 0.3rem;
                 outline: none;
 
                 &.error {
                     border: 1px solid red;
+                    border-radius: 0.3rem;
                 }
             }
         }
