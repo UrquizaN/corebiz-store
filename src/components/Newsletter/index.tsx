@@ -7,21 +7,19 @@ import INewsletter from '../../Interfaces/INewsletter'
 
 import {
     Formik,
-    FormikHelpers,
     Form,
     Field,
     ErrorMessage
-  } from 'formik';
+} from 'formik';
 
 
 const Newsletter = () => {
     const [isSubmitted, setSubmitted] = useState(false);
 
-    const handleSubmit = useCallback(async (
-        { name, email }: INewsletter, helpers: FormikHelpers<INewsletter>) => {
+    const handleSubmit = useCallback(async ( { name, email }: INewsletter) => {
 
-        const isValid = await newsletterValidation.isValid({ name, email });
-        isValid ? await api.post("https://corebiz-test.herokuapp.com/api/v1/newsletter", {name, email}) : console.log('Error');
+        await api.post("https://corebiz-test.herokuapp.com/api/v1/newsletter", {name, email}) 
+
         setSubmitted(true)
 
     }, []);
@@ -50,10 +48,9 @@ const Newsletter = () => {
                         <>
                             <h2>Participe de nossas news com promoções e novidade!</h2>
                             <Form className={styles.newsletterForm}>
-                                {console.log(formik)}
                                 <div className={styles.fieldWrapper}>
                                     <Field type="text" name="name" placeholder="Digite seu nome" className={`${ formik.touched.name && formik.errors.name && styles.error }`} />
-                                    <ErrorMessage name="name" component="div"  className={styles.errorMessage} />
+                                    <ErrorMessage name="name" component="div" className={styles.errorMessage} />
                                 </div>
                                 <div className={styles.fieldWrapper}>
                                     <Field type="email" name="email" placeholder="Digite seu email" className={`${ formik.touched.email && formik.errors.email && styles.error }`} />

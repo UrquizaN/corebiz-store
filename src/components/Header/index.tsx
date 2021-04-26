@@ -3,8 +3,11 @@ import styles from './styles.module.scss';
 import corebizLogo from '../../assets/corebiz-logo.svg';
 import userIcon from '../../assets/user-icon.svg';
 import minicartIcon from '../../assets/minicart-icon.svg';
+import { useCart } from '../../contexts/CartContext';
 
 const Header = () => {
+    const { cart } = useCart()
+
     return(
         <header>
             <div className={styles.headerContainer}>
@@ -21,6 +24,7 @@ const Header = () => {
                         <span>Minha Conta</span>
                     </div>
                     <img src={minicartIcon} className={styles.miniCart} alt="Carrinho" />
+                    <span className={styles.counter}>{cart.quantity}</span>
                 </div>
             </div>
         </header>
