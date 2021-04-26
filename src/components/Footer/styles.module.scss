@@ -18,6 +18,20 @@ footer {
         .location {
             line-height: 160%;
 
+            h2 {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 20%;
+                    height: 6px;
+                    background: $white;
+                    position: absolute;
+                    bottom: -14px;
+                    left: 0;
+                }
+            }
+
             p {
                 margin-top: 2rem;
             }
@@ -80,6 +94,15 @@ footer {
 
                 button {
                     width: 100%;
+                }
+            }
+
+            .location {
+                h2 {
+                    &::after {
+                        width: 20%;
+                        height: 5px;
+                    }
                 }
             }
 
