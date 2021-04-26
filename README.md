@@ -77,6 +77,7 @@ $ yarn start
   - [x] Itens do carrinho
   - [x] Quantidade de itens no carrinho
   - [x] Valor total do carrinho
+ 
 *No momento é possível a visualização apenas no local storage do browser
 
 <img align="center" src="/src/assets/localstorage.png" />
