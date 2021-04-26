@@ -1,4 +1,4 @@
-export default interface Newsletter{
+export default interface INewsletter{
     name: string;
     email: string;
 }

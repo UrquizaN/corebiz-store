@@ -1,4 +1,4 @@
-export default interface Product {
+export default interface IProduct {
     productId: number;
     price: number;
     listPrice: number;
