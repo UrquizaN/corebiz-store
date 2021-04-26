@@ -22,17 +22,17 @@ Tabela de conteúdos
 <!--te-->
 
 ## Telas
-### Desktop
+### Desktop 💻
 <img src="src/assets/corebiz-store.gif" />
 
-### Mobile
+### Mobile 📱
 <img src="src/assets/corebiz-store-mobile.gif" />
 
-## Funcionalidades
+## Funcionalidades 
 - Adicionar ítens ao carrinho:
 - Submeter formulário da newsletter
 
-## Tecnologias utilizadas
+## Tecnologias utilizadas 👨‍💻
 - [x] ReactJs
 - [x] Typescript
 - [x] Axios
@@ -48,7 +48,7 @@ Você precisa ter instalado em sua máquina as seguintes ferramentas:
 - [Git](https://git-scm.com)
 - [Node.js](https://nodejs.org/en/) 
 
-### 🎲 Clonando o repositório
+###  Clonando o repositório 🧬
 
 ```bash
 # Clone este repositório
@@ -57,7 +57,7 @@ $ git clone <https://github.com/UrquizaN/corebiz-store>
 # Acesse a pasta do projeto no terminal/cmd
 $ cd corebiz-store
 ```
-### 🛠 Instalando e executando
+###  Instalando e executando 🛠
 
 ```bash
 # Instale as dependências
