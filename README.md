@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+<p align="center" >
+<img align="center" src="/assets/banner.svg" />
+<a href="https://www.linkedin.com/in/urquiza-n%C3%B3brega-b999a1105/"><img src="https://img.shields.io/badge/LinkedIn-Urquiza%20N%C3%B3brega-blue"></a>
+</p>
+<h1 align="center">Corebiz Store</h1>
+<p align="center">Teste técnico Dev Fron-End</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h5 align="center"> 🚀 Projeto finalizado 🚀 </h5>
 
-## Available Scripts
+Tabela de conteúdos
+=================
+<!--ts-->
+   * Telas
+      * [Desktop](#desktop)
+      * [Mobile](#mobile)
+   * [Funcionalidades](#funcionalidades)
+   * [Tecnologias utilizadas](#tecnologias-utilizadas)
+   * Instalação
+      * [Pré requisitos](#pré-requisitos)
 
-In the project directory, you can run:
+<!--te-->
 
-### `npm start`
+## Telas
+### Desktop
+<img src="src/assets/corebiz-store.gif" />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Mobile
+<img src="src/assets/corebiz-store-mobile.gif" />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Funcionalidades
+- Adicionar ítens ao carrinho:
+- Submeter formulário da newsletter
 
-### `npm test`
+## Tecnologias utilizadas
+- [x] ReactJs
+- [x] Typescript
+- [x] Axios
+- [x] Formik
+- [x] Sass
+- [x] Yup
+- [x] React Splider
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalação
 
-### `npm run build`
+### Pré-requisitos
+Você precisa ter instalado em sua máquina as seguintes ferramentas:
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org/en/) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🎲 Clonando o repositório
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone este repositório
+$ git clone <https://github.com/UrquizaN/corebiz-store>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Acesse a pasta do projeto no terminal/cmd
+$ cd corebiz-store
+```
+### 🛠 Instalando e executando
 
-### `npm run eject`
+```bash
+# Instale as dependências
+$ npm install
+ou 
+$ yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Execute o projeto
+$ npm start
+ou 
+$ yarn start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# O projeto inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h3 align="center">
+💻 Desenvolvido por: Urquiza Nóbrega
+</h3>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
