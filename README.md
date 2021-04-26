@@ -1,5 +1,5 @@
 <p align="center" >
-<img align="center" src="/assets/banner.svg" />
+<img align="center" src="src/assets/banner.png" />
 <a href="https://www.linkedin.com/in/urquiza-n%C3%B3brega-b999a1105/"><img src="https://img.shields.io/badge/LinkedIn-Urquiza%20N%C3%B3brega-blue"></a>
 </p>
 <h1 align="center">Corebiz Store</h1>
