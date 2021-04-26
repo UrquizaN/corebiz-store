@@ -17,6 +17,7 @@ Tabela de conteúdos
    * [Tecnologias utilizadas](#tecnologias-utilizadas)
    * Instalação
       * [Pré requisitos](#pré-requisitos)
+   * [Melhorias](#melhorias)
 
 <!--te-->
 
