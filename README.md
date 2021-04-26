@@ -71,6 +71,18 @@ $ yarn start
 
 # O projeto inciará na porta:3000 - acesse <http://localhost:3000>
 ```
+### 📌 Observações 📌
+- Na implementação do carrinho foi adicionado:
+  - [x] Itens do carrinho
+  - [x] Quantidade de itens no carrinho
+  - [x] Valor total do carrinho
+*No momento é possível a visualização apenas no local storage do browser
+
+<img align="center" src="/src/assets/localstorage.png" />
+
+### 🎇 Melhorias 🎇
+- Implementação do mini cart
+- Adicionar menu nas versões desktop e mobile
 
 <h3 align="center">
 💻 Desenvolvido por: Urquiza Nóbrega
