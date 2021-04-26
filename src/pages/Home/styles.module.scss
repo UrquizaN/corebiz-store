@@ -1,3 +1,4 @@
+@import '../../styles/colors';
 
 .container {
     width: 100%;
@@ -12,4 +13,71 @@
     margin: 0 auto;
 
     padding: 2rem;
+
+    h1 {
+        position: relative;
+
+        margin-bottom: 2rem;
+
+        &::after {
+            content: '';
+            width: 9%;
+            height: 6px;
+            background: $gray-light-2;
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+        }
+    }
+}
+
+.shelfPrev,
+.shelfNext,
+.carouselfPrev,
+.carouselfNext {
+    svg {
+        fill: $pink !important;
+        width: 1.6rem !important;
+    }
+}
+
+.shelfPrev {
+    left: -1.5rem!important;
+}
+
+.shelfNext {
+    right: -1.5rem!important;
+}
+
+.shelfPagination {
+    bottom: -1.5rem!important;
+
+    .activePage{
+        &.is-active {
+            background: $pink!important;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .content {
+        padding: 1rem;
+
+        h1 {
+            font-size: 1.8rem;
+
+            &::after {
+                width: 30%;
+                height: 5px;
+            }
+        }
+    }
+
+    .shelfPrev {
+        left: -1rem!important;
+    }
+    
+    .shelfNext {
+        right: -1rem!important;
+    }
 }

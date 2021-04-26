@@ -1,6 +1,6 @@
 // Styles
 import styles from './styles.module.scss';
-
+import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 // Interfaces
 import Product from '../../Interfaces/IProduct';
 
@@ -8,16 +8,37 @@ import Product from '../../Interfaces/IProduct';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Newsletter from '../../components/Newsletter';
-import Shelf from '../../components/Shelf';
+import ShelfItem from '../../components/Shelf';
 
 import bannerHomeDesktop from '../../assets/banner-home-desktop.png';
+import bannerHomeMobile from '../../assets/banner-home-mobile.png';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 // Settings
 import api from '../../services/api';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 const Home = () => {
     const [products, setProducts] = useState<Product[]>([]);
+
+    const banners = useMemo(()=>{
+        let banners = [];
+
+        for(let i = 0; i < 3; i++){
+            banners.push(
+                (
+                    <SplideSlide key={i}>
+                        <section className={styles.container}>
+                        <img src={window.screen.width < 720 ? bannerHomeMobile : bannerHomeDesktop } alt="Banner - O que você está buscando?" />
+                        </section>
+                    </SplideSlide>
+                )
+            )
+        }
+
+        return banners;
+    }, [])
 
     useEffect(() => {
         async function getProducts() {
@@ -25,25 +46,58 @@ const Home = () => {
                 const { data } = await api.get("/products");
                 setProducts(data);
             } catch (error) {
-                console.error('Error: ', error);
+                alert('Não foi possível encontrar os produtos');
             }
         }
 
         getProducts();
     }, [])
 
-    return(
+    return (
         <>
             <Header />
-            <section className={styles.container}>
-                <img src={bannerHomeDesktop} alt="Banner - O que você está buscando?"/>
-            </section>
+            <Splide options={{
+                rewind: true,
+                classes: {
+                    prev: `splide__arrow--prev ${styles.carouselfPrev}`,
+                    next: `splide__arrow--next ${styles.carouselfNext}`,
+                    page: `splide__pagination__page styles_activePage__1O_bo ${styles.activePage}`,
+                }
+            }}>
+                { banners }
+           </Splide>
 
             <main className={styles.container}>
                 <div className={styles.content}>
-                <h1>Mais vendidos</h1>
+                    <h1>Mais vendidos</h1>
 
-                {products.map( product => <Shelf key={product.productId} product={product} /> )}
+                    <Splide options={{
+                        rewind: true,
+                        gap: '1rem',
+                        perPage: 4,
+                        breakpoints: {
+                            720: {
+                                width: '100%',
+                                perPage: 2,
+                                gap: '1rem',
+                            },
+                        },
+                        classes: {
+                            prev: `splide__arrow--prev ${styles.shelfPrev}`,
+                            next: `splide__arrow--next ${styles.shelfNext}`,
+		                    page      : `splide__pagination__page styles_activePage__1O_bo ${styles.activePage}`, // each button
+                            pagination: `splide__pagination ${styles.shelfPagination}`, 
+                        }
+                    }}>
+
+                        {products.map(product => (
+                            <SplideSlide key={product.productId} >
+                                <ShelfItem  product={product} />
+                            </SplideSlide>
+                        ))}
+
+                    </Splide>
+
                 </div>
             </main>
 
